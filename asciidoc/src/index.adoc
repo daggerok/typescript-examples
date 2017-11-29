@@ -1,0 +1,31 @@
+= TypeScript examples {project-name} ({project-version}) image:https://travis-ci.org/daggerok/typescript-examples.svg?branch=master["Build Status", link={github_url}]
+Maksim Kostromin <daggerok@gmail.com>
+{docdatetime}
+:toc:
+:revnumber: {project-version}
+:example-caption!:
+:icons: font
+:toc: left
+:numbered:
+:github_url: https://github.com/daggerok/typescript-examples
+:github_branch_prefix: {github_url}/tree
+
+[discrete]
+== Introduction
+include::includes/Introduction.adoc[]
+
+== TS 2.0: null and undefined types
+include::../../ts-2.0-null-and-undefined-types/README.adoc[tags=content]
+
+_MicroProfile 1.1.0 (CDI + JAX-RS + JSON-P)_
+
+TODO
+
+_MicroProfile 1.2 (CDI + JAX-RS + JSON-P)_
+
+TODO
+
+== links
+include::includes/Links.adoc[]
+
+== Enjoy! :)
