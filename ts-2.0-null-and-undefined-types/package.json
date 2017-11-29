@@ -1,0 +1,12 @@
+{
+  "name": "ts-2.0-null-and-undefined-types",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "2.6.2"
+  }
+}

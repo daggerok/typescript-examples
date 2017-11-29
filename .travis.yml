@@ -1,0 +1,39 @@
+group: edge
+dist: trusty
+
+env:
+  global:
+    TERM=dumb
+
+language: java
+jdk:
+  - openjdk8
+  - oraclejdk8
+
+install: true
+before_install:
+  - sudo apt update
+  - source <(curl -s https://raw.githubusercontent.com/daggerok/bash-functions/master/main.bash)
+  - stop_any 5432 5672 27017 8080
+
+script:
+  - bash gradlew clean build docs
+
+  - export parent=$(pwd)
+
+  - cd $parent/ts-2.0-null-and-undefined-types
+
+  - >
+    for project in \
+      ts-2.0-null-and-undefined-types \
+    ; do
+
+      cd ${parent}/${project}
+      yarn -i
+    done
+
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.yarn
+    - $HOME/.gradle

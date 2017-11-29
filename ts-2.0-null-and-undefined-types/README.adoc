@@ -1,0 +1,18 @@
+= typescript-examples image:https://travis-ci.org/daggerok/typescript-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/typescript-examples"]
+
+//tag::content[]
+
+=== TS 2.0
+
+. new types: `null` and `undefined`
+. spread rest examples
+
+.init
+----
+yarn init -y
+yarn global add typescript
+tsc -init
+tsc -w # yarn start
+----
+
+//end::content[]
