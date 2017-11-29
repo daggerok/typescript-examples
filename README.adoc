@@ -6,6 +6,8 @@ This repository contains simple TypeScript examples
 
 link:https://daggerok.github.io/typescript-examples[Documentation]
 
+. link:ts-2.0-null-and-undefined-types/[strict types / spread-rest example]
+
 links:
 
 . link:https://www.youtube.com/watch?v=d1f6VBmWg6o[Microsoft BUILD 2017 conf talk]

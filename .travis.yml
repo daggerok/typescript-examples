@@ -13,8 +13,10 @@ jdk:
 install: true
 before_install:
   - sudo apt update
-  - source <(curl -s https://raw.githubusercontent.com/daggerok/bash-functions/master/main.bash)
-  - stop_any 5432 5672 27017 8080
+  - nvm install lts/*
+  - npm i -g yarn
+#  - source <(curl -s https://raw.githubusercontent.com/daggerok/bash-functions/master/main.bash)
+#  - stop_any 5432 5672 27017 8080
 
 script:
   - bash gradlew clean build docs
