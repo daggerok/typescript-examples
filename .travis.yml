@@ -23,11 +23,10 @@ script:
 
   - export parent=$(pwd)
 
-  - cd $parent/ts-2.0-null-and-undefined-types
-
   - >
     for project in \
-      ts-2.0-null-and-undefined-types \
+      ts-2.3-null-and-undefined-types \
+      ts-2.3-functional-oop \
     ; do
 
       cd ${parent}/${project}

@@ -1,0 +1,17 @@
+= typescript-examples image:https://travis-ci.org/daggerok/typescript-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/typescript-examples"]
+
+//tag::content[]
+
+=== TS 2.3
+
+Exhaustive checking
+
+.init
+----
+yarn init -y
+yarn add -ED typescript@2.3
+yarn gen
+yarn start
+----
+
+//end::content[]

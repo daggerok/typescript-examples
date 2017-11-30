@@ -1,5 +1,5 @@
 {
-  "name": "ts-2.0-null-and-undefined-types",
+  "name": "ts-2.3-null-and-undefined-types",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,6 +7,7 @@
     "start": "tsc -w"
   },
   "devDependencies": {
+    "@types/node": "8.0.53",
     "typescript": "2.6.2"
   }
 }

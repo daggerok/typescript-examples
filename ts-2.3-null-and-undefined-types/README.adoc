@@ -2,7 +2,7 @@
 
 //tag::content[]
 
-=== TS 2.0
+=== TS 2.3
 
 . new types: `null` and `undefined`
 . spread rest examples

@@ -1,0 +1,14 @@
+{
+  "name": "ts-2.3-functional-oop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "gen": "tsc -init",
+    "start": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/node": "8.0.53",
+    "typescript": "2.3"
+  }
+}
