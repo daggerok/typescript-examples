@@ -10,7 +10,7 @@ class Person implements User {
 
 let counter = 0;
 
-function printUsers(user?: User | undefined, ...rest: User[]) {
+function printUsers(user?: User | null | undefined, ...rest: User[]) {
   console.log(`printing ${++counter}:`);
 
   if (!user) console.log(`!user`);
