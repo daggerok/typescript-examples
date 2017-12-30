@@ -1,0 +1,19 @@
+{
+  "name": "plain-ts-toods",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "livereload": "0.6.3",
+    "npm-run-all": "4.1.2",
+    "serve": "6.4.1",
+    "typescript": "2.6.2"
+  },
+  "scripts": {
+    "prestart": "yarn -i",
+    "start": "npm-run-all -p start:*",
+    "start:tsc": "tsc -w",
+    "start:livereload": "livereload",
+    "start:serve": "serve -p 3000 -C -s"
+  }
+}

@@ -20,13 +20,8 @@ include::../../ts-2.3-null-and-undefined-types/README.adoc[tags=content]
 == TS 2.3: functional oop :)
 include::../../ts-2.3-null-and-undefined-types/README.adoc[tags=content]
 
-_MicroProfile 1.1.0 (CDI + JAX-RS + JSON-P)_
-
-TODO
-
-_MicroProfile 1.2 (CDI + JAX-RS + JSON-P)_
-
-TODO
+== TS TODO App
+include::../../plain-ts-toods/README.adoc[tags=content]
 
 == links
 include::includes/Links.adoc[]
