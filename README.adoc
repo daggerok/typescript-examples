@@ -1,4 +1,4 @@
-= typescript-examples image:https://travis-ci.org/daggerok/typescript-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/typescript-examples"]
+= typescript-examples image:https://travis-ci.org/daggerok/typescript-examples.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/typescript-examples"] link:https://bitbucket.org/daggerok/typescript-examples[bitbucket]
 
 //tag::content[]
 
@@ -12,5 +12,21 @@ link:https://daggerok.github.io/typescript-examples[Documentation]
 links:
 
 . link:https://www.youtube.com/watch?v=d1f6VBmWg6o[Microsoft BUILD 2017 conf talk]
+
+.add as bitbucket mercurial repo
+[source,bash]
+----
+hg init
+
+vim .hgignore
+
+vim .hg/hgrc
+[paths]
+default = ssh://hg@bitbucket.org/daggerok/typescript-examples
+
+hg add .
+hg commit -m "Export project from github git repo to bitbucket mercurial repo."
+hg push
+----
 
 //end::content[]

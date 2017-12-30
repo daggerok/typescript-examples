@@ -1,0 +1,19 @@
+syntax: glob
+
+.git
+
+.idea
+*.iml
+*.ipr
+*.iws
+
+**/.gradle
+**/build
+**/out
+
+node_modules
+*.js
+*.js.map
+*.map.js
+yarn.lock
+package-lock.json
