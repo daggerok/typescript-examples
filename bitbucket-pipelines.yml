@@ -1,0 +1,39 @@
+image: node:9.3.0
+
+options:
+  docker: true
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - gradle
+          - maven
+        script:
+          - docker login --username ${DOCKER_HUB_USERNAME} --password ${DOCKER_HUB_PASSWORD}
+          - >
+            function BUILD_DOCKER_IMAGE_FOR {
+              export BUILD_SYSTEM=${1};
+              #export IMAGE_NAME=${DOCKER_HUB_USERNAME}/akka-kotlin-${BUILD_SYSTEM}:${BITBUCKET_COMMIT}
+              export IMAGE_NAME=${DOCKER_HUB_USERNAME}/akka-kotlin-${BUILD_SYSTEM}:$(date +%Y-%m-%d-%H-%M)
+              # build the Docker image (this will use the Dockerfile in the root of the repo)
+              docker build -t ${IMAGE_NAME} -f docker/${BUILD_SYSTEM}/Dockerfile .;
+              # push the new Docker image to the Docker registry
+              docker push ${IMAGE_NAME};
+            }
+
+          - bash gradlew clean build docs
+
+          - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.3.2
+          - export PATH=$HOME/.yarn/bin:$PATH
+          - export parent=$(pwd)
+          - >
+            for project in \
+              plain-ts-toods \
+              ts-2.3-null-and-undefined-types \
+              ts-2.3-functional-oop \
+            ; do
+
+              cd ${parent}/${project}
+              yarn -i
+            done
